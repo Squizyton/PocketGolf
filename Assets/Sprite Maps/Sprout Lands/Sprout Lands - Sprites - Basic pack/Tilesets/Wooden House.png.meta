@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -772,7 +772,7 @@ TextureImporter:
       Wooden House_13: 47460956
       Wooden House_9: -475731842
       Wooden House_21: -1758264491
-      Wooden House_29: -119409612
+      Wooden House_5: -543955551
       Wooden House_2: 630570708
       Wooden House_25: 1180197256
       Wooden House_7: -1986869918
@@ -797,7 +797,7 @@ TextureImporter:
       Wooden House_19: 2146414045
       Wooden House_23: 103745580
       Wooden House_26: 405348496
-      Wooden House_5: -543955551
+      Wooden House_29: -119409612
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
