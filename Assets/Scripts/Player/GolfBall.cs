@@ -7,14 +7,16 @@ using UnityEngine.UIElements;
 public class GolfBall : MonoBehaviour
 {
     public Camera cam;
-
+    [SerializeField] private CircleCollider2D circleCollider;
     [SerializeField] private BallState state;
     [SerializeField] private float hitForce;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private float maxSpeed;
     [SerializeField] private bool aiming;
     private Vector3 direction;
-
+    private bool canAim;
+    
+    
     private float distance;
 
     // Update is called once per frame
@@ -32,17 +34,20 @@ public class GolfBall : MonoBehaviour
 
     private void Aiming()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && canAim)
         {
-            aiming = true;
             //Get the forward direction of the golfball by adding transform.position with the mouse position
-            direction = transform.position - cam.ScreenToWorldPoint(Input.mousePosition);
-            //Calculate the distance between the golfball and the mouse position
-            distance = Vector3.Distance(transform.position, direction);
+            
+                direction = transform.position - cam.ScreenToWorldPoint(Input.mousePosition);
+                //Calculate the distance between the golfball and the mouse position
+                distance = Vector3.Distance(transform.position, direction);
+                
+                aiming = true;  
         }
 
         if (Input.GetKeyUp(KeyCode.Mouse0) && aiming)
         {
+            canAim = false;
             rb.AddForce(direction * (hitForce * distance), ForceMode2D.Impulse);
             state = BallState.Moving;
             aiming = false;
@@ -75,7 +80,19 @@ public class GolfBall : MonoBehaviour
             //Draw a line from the ball to the mouse position
             
             Gizmos.color = Color.red;
-            Gizmos.DrawLine(transform.position, direction * 2);
+            Gizmos.DrawLine(transform.position, direction * distance);
         }
+    }
+
+    private void OnMouseOver()
+    {
+     if(!canAim)
+         canAim = true;
+    }
+
+    private void OnMouseExit()
+    {
+        if(!aiming)
+            canAim = false;
     }
 }
