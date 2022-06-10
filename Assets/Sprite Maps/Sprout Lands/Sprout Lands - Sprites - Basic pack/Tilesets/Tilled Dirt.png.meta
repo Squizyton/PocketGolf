@@ -47,7 +47,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -1446,9 +1446,8 @@ TextureImporter:
       Tilled Dirt_31: -1406898677
       Tilled Dirt_22: 1854430628
       Tilled Dirt_56: -1849887191
-      Tilled Dirt_50: 577183020
-      Tilled Dirt_3: 26272002
       Tilled Dirt_52: -1947939678
+      Tilled Dirt_3: 26272002
       Tilled Dirt_59: -64055038
       Tilled Dirt_34: 208599838
       Tilled Dirt_27: -600405102
@@ -1499,6 +1498,7 @@ TextureImporter:
       Tilled Dirt_16: -863716784
       Tilled Dirt_40: -560100923
       Tilled Dirt_29: -1274591795
+      Tilled Dirt_50: 577183020
       Tilled Dirt_15: 1976665609
       Tilled Dirt_24: 1765703790
       Tilled Dirt_44: -390836013
